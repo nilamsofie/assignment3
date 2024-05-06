@@ -1,0 +1,9 @@
+services:
+  api:
+    build: .
+    ports:
+      - "80:8080"
+    environment:
+      - APP_ENV=PRODUCTION
+      - FIREBASE_CREDENTIALS=${FIREBASE_CREDENTIALS}
+    restart: always
